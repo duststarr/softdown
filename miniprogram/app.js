@@ -1,20 +1,41 @@
 //app.js
 App({
   onLaunch: function () {
-    
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
       wx.cloud.init({
-        // env 参数说明：
-        //   env 参数决定接下来小程序发起的云开发调用（wx.cloud.xxx）会默认请求到哪个云环境的资源
-        //   此处请填入环境 ID, 环境 ID 可打开云控制台查看
-        //   如不填则使用默认环境（第一个创建的环境）
-        // env: 'my-env-id',
         traceUser: true,
       })
     }
-
-    this.globalData = {}
-  }
+  },
+  globalData : {
+    userDetail : null
+  },
+  /**
+  * 手动触发更新
+  * @param {*} name 
+  */
+  globalEmit: function (name) {
+    if (this.globalData._watches && this.globalData._watches[name]) {
+      this.globalData._watches[name].forEach(func => {
+        func(this.globalData[name])
+      })
+    }
+  },
+  /**
+   * 订阅全局变量的变更
+   * @param {*} name 
+   * @param {*} callback 
+   * @param {*} callAtonce 如果有值是否立即回调
+   */
+  globalWatch: function (name, callback, callAtonce = true) {
+    if (!this.globalData._watches)
+      this.globalData._watches = {}
+    if (!this.globalData._watches[name])
+      this.globalData._watches[name] = []
+    this.globalData._watches[name].push(callback)
+    if (callAtonce && this.globalData[name])
+      callback(this.globalData[name])
+  },
 })
