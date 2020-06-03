@@ -4,27 +4,27 @@
 <admin wx:if="{{PageCur=='admin'}}"></admin>
 
 <view class="cu-bar tabbar bg-white shadow foot">
-	<view class="action" bindtap="NavChange" data-cur="product">
+	<view class="action" bindtap="NavChange" data-cur="default">
 		<view class='cuIcon-cu-image'>
-			<image src="/images/tabbar/product{{PageCur=='product'?'_cur':''}}.png"></image>
+	    <text class="cuIcon-homefill lg text-{{PageCur=='default'?'green':'gray'}}"></text>
 		</view>
 		<view class="{{PageCur=='default'?'text-green':'text-gray'}}">首页</view>
 	</view>
 	<view class="action" bindtap="NavChange" data-cur="category" wx:if="{{isClient}}">
 		<view class='cuIcon-cu-image'>
-			<image src="/images/tabbar/device{{PageCur=='device'?'_cur':''}}.png"></image>
+	    <text class="cuIcon-circlefill lg text-{{PageCur=='category'?'green':'gray'}}"></text>
 		</view>
 		<view class="{{PageCur=='category'?'text-green':'text-gray'}}">分类</view>
 	</view>
 	<view class="action" bindtap="NavChange" data-cur="member">
 		<view class='cuIcon-cu-image'>
-			<image src="/images/tabbar/member{{PageCur=='member'?'_cur':''}}.png"></image>
+	    <text class="cuIcon-myfill lg text-{{PageCur=='member'?'green':'gray'}}"></text>
 		</view>
 		<view class="{{PageCur=='member'?'text-green':'text-gray'}}">会员</view>
 	</view>
 	<view class="action" bindtap="NavChange" data-cur="admin" wx:if="{{isAdmin}}">
 		<view class='cuIcon-cu-image'>
-			<image src="/images/tabbar/admin{{PageCur=='admin'?'_cur':''}}.png"></image>
+	    <text class="cuIcon-crownfill lg text-{{PageCur=='admin'?'green':'gray'}}"></text>
 		</view>
 		<view class="{{PageCur=='admin'?'text-green':'text-gray'}}">后台</view>
 	</view>

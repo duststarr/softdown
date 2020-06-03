@@ -3,8 +3,8 @@ const app = getApp()
 Page({
   data: {
     PageCur: 'default',
-    isAdmin: false,
-    isClient: false
+    isAdmin: true,
+    isClient: true
   },
   NavChange(e) {
     this.setData({

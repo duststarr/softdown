@@ -1,17 +1,17 @@
 {
   "pages": [
-    "pages/home/home"
+    "pages/home/home",
+    "pages/home/member/member",
+    "pages/home/default/default"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#39b54a",
+    "navigationBarTitleText": "Color UI",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
   },
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
   },
-  "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "sitemapLocation": "sitemap.json"
 }

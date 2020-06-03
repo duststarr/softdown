@@ -8,14 +8,26 @@ App({
         traceUser: true,
       })
     }
+    wx.getSystemInfo({
+      success: e => {
+        this.globalData.StatusBar = e.statusBarHeight;
+        let capsule = wx.getMenuButtonBoundingClientRect();
+        if (capsule) {
+          this.globalData.Custom = capsule;
+          this.globalData.CustomBar = capsule.bottom + capsule.top - e.statusBarHeight;
+        } else {
+          this.globalData.CustomBar = e.statusBarHeight + 50;
+        }
+      }
+    })
   },
-  globalData : {
-    userDetail : null
+  globalData: {
+    userDetail: null
   },
   /**
-  * 手动触发更新
-  * @param {*} name 
-  */
+   * 手动触发更新
+   * @param {*} name 
+   */
   globalEmit: function (name) {
     if (this.globalData._watches && this.globalData._watches[name]) {
       this.globalData._watches[name].forEach(func => {

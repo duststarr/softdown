@@ -11,7 +11,7 @@
 	},
 	"appid": "wx5c7e9e0f6dc5e61d",
 	"projectname": "pdown",
-	"libVersion": "2.8.1",
+	"libVersion": "2.9.0",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
