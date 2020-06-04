@@ -7,19 +7,19 @@
 	</swiper-item>
 </swiper>
 <view class='grid col-2'>
-	<view class="cu-card case" wx:for="{{15}}">
-		<view class="cu-item shadow">
-			<view class="image">
+	<view class="cu-card case padding-0" wx:for="{{15}}">
+		<view class="cu-item shadow " style='margin:10rpx;' bindtap='onSoft' data-pos='{{index}}'>
+			<view class="image"> 
 				<image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="widthFix"></image>
-				<view class="cu-tag bg-blue">史诗</view>
+				<view class="cu-tag bg-{{index%3==1?'red':'blue'}}">{{index%3==1?'火爆':'优秀'}}</view>
 				<view class="cu-bar bg-shadeBottom">
-					<text class="text-cut">我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。</text>
+					<text class="text-cut">Photoshop 2029</text>
 				</view>
 			</view>
 			<view class="cu-list">
 				<view class="cu-item">
 					<view class="content flex-sub">
-						<view class="text-grey">正义天使 凯尔</view>
+						<view class="text-grey">特价10.00元</view>
 					</view>
 				</view>
 			</view>

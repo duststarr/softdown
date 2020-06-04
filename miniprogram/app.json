@@ -2,7 +2,8 @@
   "pages": [
     "pages/home/home",
     "pages/home/member/member",
-    "pages/home/default/default"
+    "pages/home/default/default",
+    "pages/softAdd/softAdd"
   ],
   "window": {
     "navigationBarBackgroundColor": "#39b54a",

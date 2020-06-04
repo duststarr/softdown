@@ -18,6 +18,25 @@
 	</view>
 </view>
 
+
+<view class='margin-top flex bg-white'>
+	<view class=' padding-sm'>
+		<navigator class="content" url="/pages/member/myQRcode/myQRcode" hover-class="none">
+			<view>
+				<image class='qrcode' src='{{qrcode}}' mode='aspectFit'></image>
+			</view>
+			<text class="text-grey response text-center">我的推广二维码</text>
+		</navigator>
+	</view>
+	<view class='padding response'>
+		<navigator class="content" url="/pages/member/notice/notice" hover-class="none">
+			<view class=' padding-sm text-lg indent'> 这是您的专属二维码，分享出去，即可赢得优惠券。具体会员推广规则见
+				<text class="text-blue">会员须知</text>
+			</view>
+		</navigator>
+	</view>
+</view>
+
 <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
 	<view class="cu-item arrow">
 		<view class="content" bindtap="CopyLink" data-link="https://baidu.com">

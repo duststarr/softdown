@@ -1,2 +1,52 @@
-<!--pages/home/admin/admin.wxml-->
-<text>pages/home/admin/admin.wxml</text>
+<view>
+	<button class='margin-top' type='primary'>分类管理</button>
+</view>
+<view class="cu-bar bg-white solids-bottom margin-top">
+	<view class="action">
+		<text class="cuIcon-title text-blue"></text>MAC
+	</view>
+	<view class='action'>
+		<navigator url="/pages/softAdd/softAdd" hover-class="none">
+			<button class='cu-btn bg-green'>添加</button>
+		</navigator>
+	</view>
+</view>
+<view class="cu-list menu-avatar">
+	<view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{2}}" wx:key bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
+		<view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big2100{{index+1}}.jpg);"></view>
+		<view class="content">
+			<view class="text-grey">Photoshop 2029</view>
+			<view class="text-gray text-sm">
+				<text class="cuIcon-infofill text-red"></text> 制图必备</view>
+		</view>
+		<view class="action">
+			<view class="text-grey text-xs">左滑</view>
+			<view class="cu-tag round bg-grey sm">5</view>
+		</view>
+		<view class="move">
+			<view class="bg-grey">置顶</view>
+			<view class="bg-red">删除</view>
+		</view>
+	</view>
+</view>
+<view class="cu-bar bg-white solids-bottom margin-top">
+	<view class="action">
+		<text class="cuIcon-title text-blue"></text>WIN10
+	</view>
+	<view class='action'>
+		<navigator url="/pages/softAdd/softAdd" hover-class="none">
+			<button class='cu-btn bg-green'>添加</button>
+		</navigator>
+	</view>
+</view>
+<view class="cu-bar bg-white solids-bottom margin-top">
+	<view class="action">
+		<text class="cuIcon-title text-blue"></text>WIN7
+	</view>
+	<view class='action'>
+		<navigator url="/pages/softAdd/softAdd" hover-class="none">
+			<button class='cu-btn bg-green'>添加</button>
+		</navigator>
+	</view>
+</view>
+<view class='cu-tabbar-height'></view>

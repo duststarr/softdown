@@ -18,6 +18,12 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    onSoft: function(e){
+      const pos = e.currentTarget.dataset.pos;
+      wx.showModal({
+        title:'支付',
+        content:'支付10元'
+      })
+    }
   }
 })
